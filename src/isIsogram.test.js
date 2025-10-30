@@ -6,4 +6,17 @@ describe('isIsogram', () => {
   it(`should be declared`, () => {
     expect(isIsogram).toBeInstanceOf(Function);
   });
+
+  test.each([
+    ['playgrounds', true],
+    ['look', false],
+    ['Adam', false],
+    ['', true],
+    ['Oops', false],
+    ['mM', false],
+    ['     ', false],
+    [' !&*-_=+$%', true],
+  ])('isIsogram(%s) should return %p', (word, expected) => {
+    expect(isIsogram(word)).toEqual(expected);
+  });
 });
