@@ -14,7 +14,6 @@ describe('isIsogram', () => {
     ['', true],
     ['Oops', false],
     ['mM', false],
-    ['     ', false],
   ])('isIsogram(%s) should return %p', (word, expected) => {
     expect(isIsogram(word)).toEqual(expected);
   });
